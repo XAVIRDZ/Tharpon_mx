@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 
-/// ------------------------------------------------------
+/// =====================================================
 /// TARJETA DASHBOARD
-/// ------------------------------------------------------
+/// =====================================================
 ///
 /// Widget reutilizable para mostrar información
 /// en la pantalla principal.
 ///
-/// Ejemplos:
-///
-/// Clima
-/// Mareas
-/// Consejos
-/// Promociones
-/// Capturas
+/// Se reutiliza para:
+/// - Clima
+/// - Mareas
+/// - Consejos
+/// - Promociones
+/// - Capturas
 ///
 class TarjetaDashboard extends StatelessWidget {
-  /// Icono que se mostrará.
+  /// Icono principal
   final IconData icono;
 
-  /// Título principal.
+  /// Título de la tarjeta
   final String titulo;
 
-  /// Descripción.
+  /// Descripción
   final String descripcion;
 
   const TarjetaDashboard({
@@ -34,18 +33,65 @@ class TarjetaDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 3,
+    return Container(
+      margin: const EdgeInsets.only(bottom: 15),
 
-      child: ListTile(
-        leading: Icon(icono, size: 35, color: Colors.blue),
+      decoration: BoxDecoration(
+        color: Colors.white,
 
-        title: Text(
-          titulo,
-          style: const TextStyle(fontWeight: FontWeight.bold),
+        borderRadius: BorderRadius.circular(20),
+
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+
+        child: Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(15),
+
+              decoration: BoxDecoration(
+                color: Colors.blue.shade100,
+                borderRadius: BorderRadius.circular(15),
+              ),
+
+              child: Icon(icono, size: 30, color: Colors.blue.shade800),
+            ),
+
+            const SizedBox(width: 15),
+
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+
+                children: [
+                  Text(
+                    titulo.toUpperCase(),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 5),
+
+                  Text(
+                    descripcion,
+                    style: TextStyle(fontSize: 14, color: Colors.grey.shade700),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
-
-        subtitle: Text(descripcion),
       ),
     );
   }
