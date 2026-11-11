@@ -20,9 +20,11 @@ class PantallaInicio extends StatelessWidget {
         child: Column(
           children: tarjetasDashboard.map((tarjeta) {
             return TarjetaDashboard(
-              icono: tarjeta['icono'],
-              titulo: tarjeta['titulo'],
-              descripcion: tarjeta['descripcion'],
+              icono: tarjeta.icono,
+
+              titulo: tarjeta.titulo,
+
+              descripcion: tarjeta.descripcion,
             );
           }).toList(),
         ),

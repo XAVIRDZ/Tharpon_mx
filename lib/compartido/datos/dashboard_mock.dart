@@ -1,37 +1,41 @@
 import 'package:flutter/material.dart';
 
-/// =======================================================
-/// DATOS SIMULADOS DEL DASHBOARD
-/// =======================================================
+import '../modelos/tarjeta_dashboard_modelo.dart';
+
+/// =====================================================
+/// DATOS SIMULADOS
+/// =====================================================
 ///
-/// Estos datos se utilizan mientras
-/// no existe conexión con Firebase
-/// o APIs externas.
-///
-final List<Map<String, dynamic>> tarjetasDashboard = [
-  {'icono': Icons.wb_sunny, 'titulo': 'Clima', 'descripcion': '28°C - Soleado'},
+/// Información temporal mientras no existe
+/// conexión con Firebase.
+final List<TarjetaDashboardModelo> tarjetasDashboard = [
+  TarjetaDashboardModelo(
+    icono: Icons.wb_sunny,
+    titulo: 'Clima',
+    descripcion: '28°C - Soleado',
+  ),
 
-  {
-    'icono': Icons.water,
-    'titulo': 'Mareas',
-    'descripcion': 'Pleamar: 16:30 hrs',
-  },
+  TarjetaDashboardModelo(
+    icono: Icons.water,
+    titulo: 'Mareas',
+    descripcion: 'Pleamar: 16:30 hrs',
+  ),
 
-  {
-    'icono': Icons.menu_book,
-    'titulo': 'Consejos',
-    'descripcion': 'Pesca de robalo',
-  },
+  TarjetaDashboardModelo(
+    icono: Icons.menu_book,
+    titulo: 'Consejos',
+    descripcion: 'Consejos para pesca de robalo',
+  ),
 
-  {
-    'icono': Icons.local_offer,
-    'titulo': 'Promociones',
-    'descripcion': '20% en carretes',
-  },
+  TarjetaDashboardModelo(
+    icono: Icons.local_offer,
+    titulo: 'Promociones',
+    descripcion: '20% de descuento en carretes',
+  ),
 
-  {
-    'icono': Icons.phishing,
-    'titulo': 'Capturas',
-    'descripcion': 'Sin capturas registradas',
-  },
+  TarjetaDashboardModelo(
+    icono: Icons.phishing,
+    titulo: 'Capturas',
+    descripcion: 'No existen capturas registradas',
+  ),
 ];

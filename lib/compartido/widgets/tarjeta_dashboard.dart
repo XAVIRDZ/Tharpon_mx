@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../nucleo/colores_app.dart';
+
 /// =====================================================
 /// TARJETA DASHBOARD
 /// =====================================================
@@ -37,7 +39,7 @@ class TarjetaDashboard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 15),
 
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: ColoresApp.blanco,
 
         borderRadius: BorderRadius.circular(20),
 
@@ -59,7 +61,7 @@ class TarjetaDashboard extends StatelessWidget {
               padding: const EdgeInsets.all(15),
 
               decoration: BoxDecoration(
-                color: Colors.blue.shade100,
+                color: ColoresApp.azulMarino,
                 borderRadius: BorderRadius.circular(15),
               ),
 
